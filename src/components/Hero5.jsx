@@ -78,7 +78,7 @@ export default function Hero5() {
         "Web UI via Streamlit — no CLI knowledge required",
       ],
       tech: ["Python", "OpenAI GPT-4", "Streamlit", "LangChain", "FAISS", "RAG Pipeline", "Tiktoken"],
-      github: "https://github.com/Jothireddy",
+      github: "https://github.com/Jothireddy/pep8-agent",
       website: null,
     },
     {
@@ -120,7 +120,7 @@ export default function Hero5() {
         "Rate limiting, CORS support, and Winston logging",
       ],
       tech: ["Node.js", "Express.js", "MongoDB", "Python ML Models", "JWT", "Winston", "Cron Jobs", "REST API"],
-      github: null,
+      github: "https://github.com/Jothireddy/email-security-app",
       website: null,
     },
     {
