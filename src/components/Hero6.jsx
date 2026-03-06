@@ -4,20 +4,19 @@ export default function Hero6() {
       style={{
         backgroundColor: "#e8e8e8",
         width: "100%",
-        height: "100vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        overflow: "hidden",
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@900;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500;900&display=swap');
 
         .thankyou-text {
           font-family: 'Montserrat', 'Arial Black', sans-serif;
           font-weight: 900;
-          font-size: clamp(100px, 18vw, 220px);
+          font-size: clamp(48px, 18vw, 220px);
           line-height: 0.85;
           letter-spacing: -0.03em;
           color: #111111;
@@ -29,7 +28,7 @@ export default function Hero6() {
         .signature-text {
           font-family: 'Dancing Script', cursive;
           font-weight: 700;
-          font-size: clamp(36px, 5.5vw, 80px);
+          font-size: clamp(20px, 5.5vw, 80px);
           color: #e02020;
           position: absolute;
           top: 50%;
@@ -52,15 +51,35 @@ export default function Hero6() {
           gap: 6px;
           transition: color 0.2s;
         }
-
         .social-link:hover { color: #e02020; }
+
+        /* Desktop footer */
+        .social-footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 32px 28px;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+
+        @media (max-width: 640px) {
+          .social-footer {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px 28px;
+            gap: 14px;
+          }
+          .social-link { font-size: 13px; }
+          .social-link svg { width: 18px; height: 18px; }
+        }
       `}</style>
 
-      {/* Top bar — empty spacer to match other pages */}
+      {/* Top spacer */}
       <div style={{ padding: '20px 32px 0' }} />
 
       {/* Center — thank you + signature */}
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', padding: '0 8px' }}>
         <div style={{ position: 'relative', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div className="thankyou-text">thankyou</div>
           <div className="signature-text">Jyothi Reddy</div>
@@ -68,19 +87,14 @@ export default function Hero6() {
       </div>
 
       {/* Footer — social links */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '0 32px 24px',
-      }}>
+      <div className="social-footer">
 
         {/* GitHub */}
-        <a href="https://github.com/jyothireddy" target="_blank" rel="noreferrer" className="social-link">
+        <a href="https://github.com/Jothireddy" target="_blank" rel="noreferrer" className="social-link">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
           </svg>
-          github.com/jyothireddy
+          github.com/Jothireddy
         </a>
 
         {/* LinkedIn */}
